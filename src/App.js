@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import CountButton from "./CountButton";
+import SearchBar from "./SearchBar/SearchBar";
+import'./styles/styles.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CountButton incrementBy={1} buttonColor={'blue'}/>
+      <CountButton incrementBy={5} buttonColor={'orange'}/>
+      <CountButton incrementBy={6} buttonColor={'pink'}/>
+      <SearchBar />
     </div>
   );
-}
+};
 
 export default App;
+
+//porps are values that you can pass to.
